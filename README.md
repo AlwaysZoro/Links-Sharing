@@ -1,4 +1,4 @@
-# 📱 Advanced Link Sharing Bot
+# 📱 Link Sharing Bot
 
 This bot is designed to help you keep your channels safe from copyright issues while sharing links in a simple and secure manner. If you just want to ensure that your content stays protected, this bot has got your back! 💪
 
@@ -25,20 +25,6 @@ If you're using a VPS (Virtual Private Server), follow these steps:
 
 ---
 
-## 🔑 Secrets (Environment Variables)
-
-Add the following environment variables to ensure the bot runs smoothly:
-
-- **TG_BOT_TOKEN**: Your bot's Telegram token.
-- **APP_ID**: Your Telegram App ID (get it from [my.telegram.org](https://my.telegram.org)).
-- **API_HASH**: Your Telegram API hash.
-- **OWNER_ID**: Your Telegram user ID.
-- **PORT**: Port number (usually `8080` for Heroku, or any port on VPS).
-- **DATABASE_URL**: The MongoDB database URI.
-- **DATABASE_NAME**: The name of your database.
-
----
-
 ## ⚡ Commands
 
 Here are all the commands you can use with the bot:
@@ -53,20 +39,3 @@ Here are all the commands you can use with the bot:
 - `stats`: Check bot usage and other statistics! 📊
 
 ---
-
-## 🧑‍💻 Credits
-
-This bot is powered by **[Seishiro Nagi](https://t.me/The_Seishiro_Nagi)** 🙏. Huge thanks to **Seishiro Nagi** for the awesome creation and constant support! 🔥
-
----
-
-## 📞 Contact
-
-- Telegram: [@the_Seishiro_Nagi](https://t.me/The_Seishiro_Nagi) 📱
-- Join Support Channel: [Anime Hunters](https://t.me/Anime_X_Hunters) 🆘
-
----
-
-### ⭐️ Thank you for using this bot! ⭐️
-
-We hope you find it helpful. Stay protected and share links safely! 🌐

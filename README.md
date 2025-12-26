@@ -1,27 +1,6 @@
 # 📱 Advanced Link Sharing Bot
 
-Welcome to the **Advanced Link Sharing Bot**! 🚀
-
-This bot is designed to help you **keep your channels safe** from copyright issues while sharing links in a simple and secure manner. If you just want to ensure that your content stays protected, this bot has got your back! 💪
-
----
-
-## 🌟 Features
-
-- **Secure Link Sharing**: Share your links without worrying about copyright strikes! 📤
-- **Advanced Protection**: Safeguard your channel from malicious or harmful links! 🔒
-- **Easy-to-use**: Simply use `/start` and get started with a smooth experience. 🚀
-- **Admin Controls**: Access commands to manage your channels and users with ease! 🛠️
-
----
-
-## 🚀 Deployment
-
-### 🌍 Deploy on **Heroku**
-
-*Before you deploy on HEROKU, you should fork the repo and change its name*<br>
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)</br>
+This bot is designed to help you keep your channels safe from copyright issues while sharing links in a simple and secure manner. If you just want to ensure that your content stays protected, this bot has got your back! 💪
 
 ---
 
@@ -40,7 +19,7 @@ If you're using a VPS (Virtual Private Server), follow these steps:
     ```
 3. Run the bot with:
     ```bash
-    python main.py
+    python3 main.py
     ```
 4. Your bot will start running. You can keep it running in the background using **screen** or **tmux**.
 

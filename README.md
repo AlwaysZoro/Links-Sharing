@@ -1,10 +1,10 @@
-# 📱 Link Sharing Bot
+# Link Sharing Bot
 
-This bot is designed to help you keep your channels safe from copyright issues while sharing links in a simple and secure manner. If you just want to ensure that your content stays protected, this bot has got your back! 💪
+This bot is designed to help you keep your channels safe from copyright issues while sharing links in a simple and secure manner. If you just want to ensure that your content stays protected, this bot has got your back!
 
 ---
 
-### 🖥️ Deploy on **VPS**
+### Deploy on **VPS**
 
 If you're using a VPS (Virtual Private Server), follow these steps:
 
@@ -25,17 +25,17 @@ If you're using a VPS (Virtual Private Server), follow these steps:
 
 ---
 
-## ⚡ Commands
+## Commands
 
 Here are all the commands you can use with the bot:
 
-- `start`: Start the bot and get a welcome message! 🏁
-- `broadcast`: Send a message to all users! 📢
-- `users`: List all users who have interacted with the bot. 📋
-- `channelpost`: Generate invite links for your channels. 🔗
-- `reqpost`: Generate request invite links for your channels. 📩
-- `setchannel`: Set a channel to manage with the bot. ⚙️
-- `delchannel`: Remove a channel from the bot's control. ❌
-- `stats`: Check bot usage and other statistics! 📊
+- `start`: Start the bot and get a welcome message!
+- `broadcast`: Send a message to all users!
+- `users`: List all users who have interacted with the bot.
+- `channelpost`: Generate invite links for your channels.
+- `reqpost`: Generate request invite links for your channels.
+- `setchannel`: Set a channel to manage with the bot.
+- `delchannel`: Remove a channel from the bot's control.
+- `stats`: Check bot usage and other statistics!
 
 ---

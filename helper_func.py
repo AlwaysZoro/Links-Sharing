@@ -6,7 +6,6 @@ from pyrogram.enums import ChatMemberStatus
 from config import ADMINS
 from pyrogram.errors.exceptions.bad_request_400 import UserNotParticipant
 from pyrogram.errors import FloodWait
-
         
 async def encode(string):
     string_bytes = string.encode("ascii")

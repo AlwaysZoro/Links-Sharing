@@ -14,11 +14,11 @@ PORT = os.environ.get("PORT", "8080")
 
 #Database
 DB_URI = os.environ.get("DATABASE_URL", "0")
-DB_NAME = os.environ.get("DATABASE_NAME", "links-sharing")
+DB_NAME = os.environ.get("DATABASE_NAME", "linksharebot")
 
 #Default
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
-START_MSG = os.environ.get("START_MESSAGE", "") #No Need keep it blank
+START_MSG = os.environ.get("START_MESSAGE", "Hi!")
 try:
     ADMINS=[]
     for x in (os.environ.get("ADMINS", "5090651635").split()):

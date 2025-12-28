@@ -8,19 +8,13 @@ TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "0")
 APP_ID = int(os.environ.get("APP_ID", "0"))
 API_HASH = os.environ.get("API_HASH", "0")
 
-##---------------------------------------------------------------------------------------------------
-
 #Main 
 OWNER_ID = int(os.environ.get("OWNER_ID", "5090651635"))
 PORT = os.environ.get("PORT", "8010")
 
-##---------------------------------------------------------------------------------------------------
-
 #Database
 DB_URI = os.environ.get("DATABASE_URL", "0")
 DB_NAME = os.environ.get("DATABASE_NAME", "links-sharing")
-
-##---------------------------------------------------------------------------------------------------
 
 #Default
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
@@ -31,23 +25,18 @@ try:
         ADMINS.append(int(x))
 except ValueError:
         raise Exception("Your Admins list does not contain valid integers.")
-
-##---------------------------------------------------------------------------------------------------        
+     
 
 #Default
 BOT_STATS_TEXT = "<b>BOT UPTIME</b>\n{uptime}"
 USER_REPLY_TEXT = None
 
-##---------------------------------------------------------------------------------------------------
-
 #Admin == OWNERID
 ADMINS.append(OWNER_ID)
 ADMINS.append(5090651635)
 
-##---------------------------------------------------------------------------------------------------
-
 #Default
-LOG_FILE_NAME = "links-sharingbot.txt"
+LOG_FILE_NAME = "linksharebot.txt"
 
 logging.basicConfig(
     level=logging.INFO,
@@ -62,7 +51,7 @@ logging.basicConfig(
         logging.StreamHandler()
     ]
 )
-logging.getLogger("pyrogram").setLevel(logging.WARNING)
+logging.getLogger("pyrogram").setLevel(logging.CRITICAL)
 
 
 def LOGGER(name: str) -> logging.Logger:

@@ -16,8 +16,6 @@ from helper_func import encode, decode
 from database.database import save_encoded_link, get_channel_by_encoded_link, save_encoded_link2, get_channel_by_encoded_link2
 from database.database import add_user, del_user, full_userbase, present_user, is_admin
 from plugins.newpost import revoke_invite_after_10_minutes
-        
-#=====================================================================================##
 
 @Bot.on_message(filters.command('start') & filters.private)
 async def start_command(client: Bot, message: Message):
@@ -77,13 +75,10 @@ async def start_command(client: Bot, message: Message):
             reply_markup=inline_buttons
         )
         
-#=====================================================================================##
 
 WAIT_MSG = """"<b>Processing ....</b>"""
 
 REPLY_ERROR = """<code>Use this command as a reply to any telegram message with out any spaces.</code>"""
-
-#=====================================================================================##
 
 @Bot.on_message(filters.command('users') & filters.user(OWNER_ID))
 async def get_users(client: Bot, message: Message):
@@ -93,9 +88,6 @@ async def get_users(client: Bot, message: Message):
     msg = await client.send_message(chat_id=message.chat.id, text=WAIT_MSG)
     users = await full_userbase()
     await msg.edit(f"{len(users)} users are using this bot")
-
-
-#=====================================================================================##
 
 @Bot.on_message(filters.private & filters.command('broadcast') & filters.user(OWNER_ID))
 async def send_text(client: Bot, message: Message):
@@ -143,8 +135,6 @@ Unsuccessful: <code>{unsuccessful}</code></b>"""
         await asyncio.sleep(8)
         await msg.delete()
 
-#=====================================================================================##
-
 @Bot.on_callback_query(filters.regex("help"))
 async def help_callback(client: Bot, callback_query):
     # Define the inline keyboard with the "Close" button
@@ -162,9 +152,6 @@ async def help_callback(client: Bot, callback_query):
 async def close_callback(client: Bot, callback_query):
     await callback_query.answer()
     await callback_query.message.delete()
-
-#=====================================================================================##
-
 
 user_message_count = {}
 user_banned_until = {}

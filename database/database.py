@@ -31,12 +31,8 @@ async def full_userbase():
 async def del_user(user_id: int):
     await user_data.delete_one({'_id': user_id})
 
-##-------------------------------------------------------------------
-
 async def is_admin(user_id: int):
     return bool(await admins_collection.find_one({'_id': user_id}))
-
-##-------------------------------------------------------------------
 
 async def save_channel(channel_id: int):
     """Save a channel_id to the database with invite link expiration."""
@@ -56,8 +52,6 @@ async def delete_channel(channel_id: int):
     """Delete a channel from the database"""
     await channels_collection.delete_one({"channel_id": channel_id})
 
-##-------------------------------------------------------------------
-
 async def save_encoded_link(channel_id: int):
     encoded_link = base64.urlsafe_b64encode(str(channel_id).encode()).decode()
     await channels_collection.update_one(
@@ -72,8 +66,6 @@ async def get_channel_by_encoded_link(encoded_link: str):
     channel = await channels_collection.find_one({"encoded_link": encoded_link, "status": "active"})
     return channel["channel_id"] if channel else None
 
-#----------------------------------------------------------------------------------------------------------------
-
 async def save_encoded_link2(channel_id: int, encoded_link: str):
     await channels_collection.update_one(
         {"channel_id": channel_id},
@@ -85,5 +77,3 @@ async def save_encoded_link2(channel_id: int, encoded_link: str):
 async def get_channel_by_encoded_link2(encoded_link: str):
     channel = await channels_collection.find_one({"req_encoded_link": encoded_link, "status": "active"})
     return channel["channel_id"] if channel else None
-
-

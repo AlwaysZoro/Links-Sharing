@@ -20,7 +20,6 @@ async def decode(base64_string):
     string = string_bytes.decode("ascii")
     return string
 
-
 def get_readable_time(seconds: int) -> str:
     count = 0
     up_time = ""

@@ -24,9 +24,6 @@ async def revoke_invite_after_10_minutes(client: Bot, channel_id: int, link: str
     except Exception as e:
         print(f"Failed to revoke invite for {channel_id}: {e}")
 
-##----------------------------------------------------------------------------------------------------        
-##----------------------------------------------------------------------------------------------------
-
 @Bot.on_message(filters.command('setchannel') & filters.private & filters.user(OWNER_ID))
 async def set_channel(client: Bot, message: Message):
     user_id = message.from_user.id
@@ -55,10 +52,7 @@ async def set_channel(client: Bot, message: Message):
     except RPCError as e:
         return await message.reply(f"RPC Error: {str(e)}")
     except Exception as e:
-        return await message.reply(f"Unexpected Error: {str(e)}")
-
-##----------------------------------------------------------------------------------------------------
-##----------------------------------------------------------------------------------------------------        
+        return await message.reply(f"Unexpected Error: {str(e)}")   
 
 @Bot.on_message(filters.command('delchannel') & filters.private & filters.user(OWNER_ID))
 async def del_channel(client: Bot, message: Message):
@@ -101,9 +95,6 @@ async def channel_post(client: Bot, message: Message):
     else:
         await message.reply("No channels available.")
 
-#-------------------------------------------------------------------------------------------------------------------------
-#------------------------------------------------------------------------------------------------------------------------- 
-
 @Bot.on_message(filters.command('reqpost') & filters.private & filters.user(OWNER_ID))
 async def req_post(client: Bot, message: Message):
     channels = await get_channels()
@@ -132,3 +123,4 @@ async def req_post(client: Bot, message: Message):
         await message.reply("📢 Select a channel to request access:", reply_markup=InlineKeyboardMarkup(keyboard))
     else:
         await message.reply("No channels available.")
+
